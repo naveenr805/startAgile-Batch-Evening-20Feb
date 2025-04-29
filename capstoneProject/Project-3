@@ -333,13 +333,13 @@ Run the below playbook on ansible Controller
     loop:
     - docker
   - name: Deploy on Test server
-    command: sudo docker run -d -P sonal04/myimage:project2
-    delegate_to: 18.117.179.135
+    command: sudo docker run -d -P naveen8129/myimage:project3
+    delegate_to: 10.0.1.115 
   - name: Perform testing on Test server
     command: echo "Testing on Server"
   - name: Deploy on Prod Server
-    command: sudo docker run -d -P sonal04/myimage:project2
-    delegate_to: 18.221.50.80
+    command: sudo docker run -d -P naveen8129/myimage:project3
+    delegate_to: 10.0.1.86 
 
 
 
